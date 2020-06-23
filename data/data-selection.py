@@ -66,7 +66,9 @@ df.dtypes
 
 
 # In[22]:
+df.astype({'geometry': str}).to_csv('selected-covid-data-phase-one.csv')
+# df.to_csv('selected-covid-data-phase-one.geojson', driver="GeoJSON")
 
 
-df.to_file('selected-covid-data-phase-one.geojson', driver="GeoJSON")
 
+# %%
