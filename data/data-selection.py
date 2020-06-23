@@ -19,7 +19,7 @@ df_original.head()
 # In[3]:
 
 
-df_original.plot()
+# df_original.plot()
 
 
 # In[4]:
@@ -51,17 +51,17 @@ df.head()
 
 # In[7]:
 
-
+# CRAZY but kepler won't let you have date without the time stamp, it just won't recognize it
 # df['Date'] = pd.to_datetime(df['Date']).dt.date
-df['Date'] = pd.to_datetime(df['Date']).dt.normalize()
+# df['Date'] = pd.to_datetime(df['Date']).dt.normalize()
 
 df.head()
 
 
 # In[15]:
 
-
-df["Date"] = df["Date"].astype(str)
+# need to do this if exporting to geojson or shp
+# df["Date"] = df["Date"].astype(str)
 df.dtypes
 
 
